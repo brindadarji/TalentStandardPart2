@@ -36,8 +36,7 @@ export default class CompanyProfile extends React.Component {
                 success: function (res) {
                     let employerData = null;
                     if (res.employer) {
-                        employerData = res.employer
-                        console.log("employerData", employerData)
+                        employerData = res.employer;
                         const name = employerData.companyContact.name;
                         const address = employerData.companyContact.location.country + ", " + employerData.companyContact.location.city;
                         const phone = employerData.companyContact.phone;

@@ -642,11 +642,18 @@ namespace Talent.Services.Profile.Controllers
             try
             {
                 var result = (await _profileService.GetTalentSnapshotListAsync(_userAppContext.CurrentUserId, false, 0, 8)).ToList();
-                return Json(new { Success = true, Data = result });
+                if(result != null)
+                {
+                    return Json(new { Success = true, Data = result });
+                }
+                else
+                {
+                    return Json(new { Success = false });
+                }
             }
             catch (Exception e)
             {
-                return Json(new { Success = false, e.Message });
+                return StatusCode(500, $"An error occurred: {e.Message}");
             }
         }
         #endregion

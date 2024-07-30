@@ -106,12 +106,14 @@ export default class TalentCard extends React.Component {
                         </div>
                         <div className="ui sixteen wide column">
                             <table className="center aligned ui single line table">
+                                <tbody>
                                 <tr>
                                     <td><Icon className='user large icon' onClick={() => this.handleIconClick(talent.id)}></Icon></td>
                                     <td><Icon className='file pdf outline large icon'></Icon></td>
                                     <td><Icon className='linkedin large icon'></Icon></td>
                                     <td><Icon className='github large icon'></Icon></td>
                                 </tr>
+                                </tbody>
                             </table>
                         </div>
                         <div className="extra content">

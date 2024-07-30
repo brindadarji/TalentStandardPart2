@@ -89,6 +89,7 @@ export default class TalentCardDetail extends React.Component {
                 </div>
                 <div className="ui sixteen wide column">
                     <table className="center aligned ui single line table">
+                        <tbody>
                         <tr>
                             <td className="photo-td">
                                 <div className="image-container">
@@ -104,18 +105,20 @@ export default class TalentCardDetail extends React.Component {
                                     <p><b>POSITION</b><span className='details-span'>{position}</span></p>
                                 </div>
                             </td>
-
                         </tr>
+                        </tbody>
                     </table>
                 </div>
                 <div className="ui sixteen wide column">
                     <table className="center aligned ui single line table">
+                        <tbody>
                         <tr>
                             <td><Icon className='video large icon' onClick={handleBackToCards}></Icon></td>
                             <td><Icon className='file pdf outline large icon'></Icon></td>
                             <td><a href={TalentDetails.linkedAccounts.linkedIn} target="_blank" rel="noopener noreferrer"><Icon className='linkedin large icon'></Icon></a></td>
                             <td><a href={TalentDetails.linkedAccounts.github} target="_blank" rel="noopener noreferrer"><Icon className='github large icon'></Icon></a></td>
                         </tr>
+                        </tbody>
                     </table>
                 </div>
                 <div className="extra content">
